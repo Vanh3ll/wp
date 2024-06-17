@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expandable and Shrinkable Sidebar with JavaScript</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+    .sidebar {
+        position: fixed;
+        left: -180px;
+        top: 0;
+        width: 180px;
+        height: 100vh;
+        background-color: #333;
+        color: #fff;
+        transition: left 0.3s ease;
+        z-index: 1;
+        overflow-y: auto;
+    }
+    .sidebar.open {
+        left: 0;
+    }
+    .sidebar-content {
+        padding: 20px;
+    }
+    .sidebar-content a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        padding: 8px 16px;
+        transition: background-color 0.3s ease;
+    }
+    .sidebar-content a:hover {
+        background-color: #555;
+    }
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+    .toggle-area {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 20px;
+        height: 100vh;
+        background-color: #333333;
+        cursor: pointer;
+        z-index: 2;
+    }
+</style>
+</head>
+<body>
+
+<div class="toggle-area" onclick="toggleSidebar()"></div>
+
+<div class="sidebar" id="sidebar">
+    <div class="sidebar-content">
+        <a href="https://vanh3ll.github.io/wp/%E4%BD%9C%E6%A5%AD1%20HW1/" target="_blank">Link to Content</a>
+    </div>
+</div>
+
+<div class="main-content">
+    <h1>Main Content Area</h1>
+    <p>This is the main content area where the content from the sidebar link will be displayed after opening the sidebar.</p>
+    <p>Feel free to add more content here.</p>
+</div>
+
+<script>
+    var sidebar = document.getElementById('sidebar');
+    var toggleArea = document.querySelector('.toggle-area');
+
+    function toggleSidebar() {
+        sidebar.classList.toggle('open');
+    }
+</script>
+
+</body>
+</html>
