@@ -31,7 +31,7 @@ CSS 網格指南：YouTube 上的“Layout Land”，作者：Jen Simmons
 
 ---
 ### 作業三 JavaScript基本練習
-    自己寫和請教學長。
+    
    https://github.com/Vanh3ll/wp/tree/master/%E4%BD%9C%E6%A5%AD3%20HW3
 
    使用 gpt 進行調試
